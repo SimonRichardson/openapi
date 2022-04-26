@@ -4,7 +4,20 @@ post:
     - Delete
   summary: Delete data
   requestBody:
-    description: Deletes data from an InfluxDB bucket.
+    description: |
+      Deletes data from an InfluxDB bucket.
+
+      Use this endpoint to delete points from a bucket in a specified time range.
+      To select points to delete within the specified time range, pass a
+      **delete predicate expression** in the `predicate` property of the request body.
+      If you don't pass a `predicate`, InfluxDB deletes all data with timestamps
+      in the specified time range.
+
+      
+
+      #### Related guides
+
+      - [Delete predicate syntax]({{% INFLUXDB_DOCS_URL %}}/reference/syntax/delete-predicate/)
     required: true
     content:
       application/json:
