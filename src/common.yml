@@ -12,5 +12,9 @@ components:
   schemas:
 #REF_COMMON_SCHEMAS
   responses:
+    AuthorizationError:
+      $ref: "./common/responses/AuthorizationError.yml"
+    ResourceNotFoundError:
+      $ref: "./common/responses/ResourceNotFoundError.yml"
     ServerError:
       $ref: "./common/responses/ServerError.yml"
